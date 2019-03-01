@@ -1,0 +1,89 @@
+=============================================================================
+** CALL FOR PAPERS **
+5th International Workshop on Artificial Intelligence for RE (AIRE'18)
+collocated with 26th IEEE International Requirements Engineering Conference
+Tuesday, August 21, 2018  - Banff, Canada
+http://aire18.aset.tu-berlin.de/
+http://easychair.org/my/conference.cgi?conf=aire18
+=============================================================================
+ 
+** OBJECTIVES **
+
+AIRE explores synergies between artificial intelligence (AI) and Requirements Engineering (RE) so that complex RE problems, such as quality defects, can be addressed through AI techniques.
+
+A focal topic of this fifth edition of the workshop is the use of AI techniques for stimulating, collecting, and analyzing crowd-generated data to derive requirements, a process commonly known as CrowdRE. Crowd-generated data provide great potential and challenges for AI techniques and automation. AIRE brings both communities together to facilitate bilateral learning and synergies that have not been tapped into yet.
+
+Finally, the workshop aims to make researchers showcase and compare their work through tool demonstrations. This way, we can interactively compare the state of the art, understand research gaps, and inspire new work. In addition, this should motivate researchers to create and share fully-functioning prototypes that are made available to the community.
+
+
+** TARGET AUDIENCE **
+
+AIRE is aimed at both participants from industry who have experience with problems with requirements quality and researchers with experience in applying automation (NLP, IR, etc.) to improve quality in RE. Our standpoint is that the industry should lead the way by explaining their most relevant problems, while academia proposes and discusses appropriate solutions, which are then again evaluated in industry. The workshop will be open to the public, and we expect an audience of 20–30 people.
+
+AIRE will feature two keynotes, of Lionel Briand and Brian Fitzgerald.
+
+ 
+** SUBMISSIONS **
+
+The workshop solicits two contribution types:
+* Research papers (max. 7 pages). These papers should describe ongoing research, in terms of automating RE tasks supporting RE tasks by AI techniques, improvements of existing approaches, as well as empirical studies and experience reports (e.g., of applied work in industry).
+* Position papers (max 3 pages). These papers serve to foster discussion on hot, relevant topics in the field, as well as problem statements explaining problems in industrial settings.
+
+In both cases, papers will be peer-reviewed and accepted papers will appear in the IEEE digital library.
+
+Selected publications will appear in a special issue on “Artificial Intelligence for Requirements Engineering” of the Automated Software Engineering Journal.
+
+Please submit your paper as a PDF file according to the IEEE formatting instructions used by RE’18 via http://easychair.org/my/conference.cgi?conf=aire18
+
+
+** IMPORTANT DATES **
+
+* Abstract Submission: June 5th, 2018
+* Paper Submission: June 12th, 2018
+* Paper Notification: July 6th, 2018
+* Camera Ready Due: July 17th, 2018
+* Workshop:	August 21st, 2018
+
+All deadlines are 23:59 Anywhere on Earth time
+
+
+** ORGANIZING COMMITTEE **
+
+* Eduard C. Groen, Fraunhofer IESE, Germany
+* Rachel Harrison, Oxford Brookes University, U.K.
+* Pradeep K. Murukannaiah, Rochester Inst. of Tech., U.S.A.
+* Andreas Vogelsang, TU Berlin, Germany
+
+
+** PROGRAM COMMITTEE **
+
+* Nirav Ajmeri, North Carolina State University, U.S.A.
+* Raian Ali, Bournemouth University, U.K.
+* Fatma Başak Aydemir, Utrecht University, Netherlands
+* Nelly Bencomo, Aston University, U.K.
+* Daniel Berry, University of Waterloo, Canada
+* Jaspreet Bhatia, Carnegie Mellon University, U.S.A.
+* Jane Cleland-Huang, University of Notre Dame, U.S.A.
+* Fabiano Dalpiaz, Utrecht University, Netherlands
+* Neil A. Ernst, Software Engineering Institute, USA
+* Henning Femmer, Technical University Munich, Germany
+* Alessio Ferrari, ISTI Pisa, Italy
+* Vincenzo Gervasi, University of Pisa, Italy
+* Jin Guo, University of Notre Dame, U.S.A.
+* Emitza Guzman, University of Zurich, Switzerland
+* Mahmood Hosseini, Bournemouth University, U.K.
+* Frank Houdek, Daimler AG, Germany
+* Marjo Kauppinen, Aalto University, Finland
+* Soo Ling Lim, University College London, U.K.
+* Daniel Mendez Fernandez, TU Munich, Germany
+* Itzel Morales Ramirez, Infotec, Mexico
+* Cristina Palomares, UPC, Spain
+* Anna Perini, Fondazione Bruno Kessler, Italy
+* Lorijn van Rooijen, University of Paderborn, Germany
+* Kurt Schneider, Leibniz Universitat Hannover, Germany
+
+
+** CONTACT **
+
+* Web: http://aire18.aset.tu-berlin.de/
+* Mail: aire18@easychair.org

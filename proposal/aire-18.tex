@@ -1,0 +1,263 @@
+\documentclass[conference,9pt]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage{flushend}
+\usepackage[color]{changebar}
+\cbcolor{blue}
+
+%\usepackage{paralist}
+
+%
+% TODO macros
+%
+\usepackage[obeyFinal, colorinlistoftodos, shadow]{todonotes}
+\newcommand{\basetodo}[2]{\todo[inline][fancyline, size=\tiny, bordercolor=#1, color=#1, linecolor=#1]{#2}}
+%\newcommand{\todo[inline]}[1]{\basetodo{red!40}{\textbf{Todo:} #1}}
+\newcommand{\idea}[1]{\basetodo{green!40}{\textbf{Idea:} #1}}
+\newcommand{\guideline}[1]{\todo[inline][inline,color=green]{\textbf{Guideline:} #1}}
+
+\title{Fifth International Workshop on \\Artificial Intelligence for Requirements Engineering (AIRE)
+%\\\textit{Focus: Automating Crowd-Based Requirements Engineering}
+}
+
+\begin{document}
+\author{
+\IEEEauthorblockN{Eduard C. Groen\IEEEauthorrefmark{1}, Rachel Harrison\IEEEauthorrefmark{2}, Pradeep K. Murukannaiah\IEEEauthorrefmark{3}, and Andreas Vogelsang\IEEEauthorrefmark{4}}
+%
+\IEEEauthorblockA{\IEEEauthorrefmark{1}
+Fraunhofer IESE\\
+Kaiserslautern, Germany\\
+eduard.groen@iese.fraunhofer.de
+}
+%\IEEEauthorblockN{Rachel Harrison}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}
+Oxford Brookes University\\
+Oxford, United Kingdom\\
+rachel.harrison@brookes.ac.uk
+}
+%\IEEEauthorblockN{Pradeep K. Murukannaiah}
+\IEEEauthorblockA{\IEEEauthorrefmark{3}
+Rochester Institute of Technology\\
+Rochester, NY, USA\\
+pkmvse@rit.edu
+}
+%\IEEEauthorblockN{Andreas Vogelsang}
+\IEEEauthorblockA{\IEEEauthorrefmark{4}
+Technische Universit\"at Berlin\\
+Berlin, Germany\\
+andreas.vogelsang@tu-berlin.de
+}
+}
+
+
+\maketitle
+%\guideline{Deadline: Tuesday, January 18, 2018}
+%\guideline{
+%All workshop proposals will be reviewed by three members of the Workshop Selection Committee. Acceptance will be based on:
+%\\
+%Evaluation of the workshop's potential to advance the state of requirements engineering research and/or practice\\
+%Relevance to requirements engineering and topics targeted for RE'18\\
+%Potential for attracting a sufficient number of participants\\
+%Organizers ability to lead a successful workshop}
+
+
+%\begin{abstract}
+%Bad requirements quality can cause high costs during software development. Reviews that prevent quality defects can be time-consuming and error-prone; Therefore, automatic approaches could reduce the required effort.
+%Various authors have worked on this topic over the last 20 years. However, currently there is no community, no common terminology and most importantly, no consolidated body of empirical knowledge, that unites the researchers in this field: What is the status quo regarding the original problem? Which part of the problem have we solved, where do we struggle? Why is there few traction in industry? What is needed to put this into practice?
+
+%Therefore, this workshop aims at bringing industry participants forward to identify the needs and challenges. Starting at these needs, academia should consolidate the state of the art in relation to these challenges, and reflect which empirical knowledge we have gained regarding these challenges. Based on this, we create a roadmap, where the goals are defined through industry needs, and results are summarized based on rigorous empirical results.
+%\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\section{Motivation and Objectives}
+\subsection{Motivation}
+Requirements are a central artifact in software engineering. Many notations exist to represent requirements; some are adopted in industry (use cases, user stories, specifications compliant with the IEEE-25010 standard) while others have been proposed by the research community (e.g., problem frames and goal models). In either case, quality defects in these artifacts can cause expensive consequences during the software development lifecycle resulting in the delivery of software systems that do not meet their purpose.
+
+Traditionally, the software industry tries to prevent or fix these defects by following quality-assurance processes such as requirements reviews. These methods, however, are time-consuming and error-prone, for they are conducted by humans that have to manually process the requirements documents.
+
+The requirements engineering (RE) research community has proposed numerous (semi-)automatic techniques to address some of these quality defects. These works take advantage of the \textit{vast landscape of techniques from artificial intelligence} (AI) such as natural language processing (NLP), information retrieval (IR), agents and multiagent systems, knowledge representation, etc. Furthermore, researchers have employed these techniques to tackle \textit{different notions of requirements quality}. Finally, the community has applied the techniques to \textit{different case studies and domains}, thereby making it hard to systematically compare the proposed techniques.
+
+Another development in the field of RE has been the steady growth of user feedback and monitoring data, that can be an important source of both functional and non-functional requirements~\cite{Groen17a}. This results in an unprecedented chance to involve many stakeholders, but also puts pressure on product developers to address these requirements in a fast, effective, and iterative way. Techniques aimed at using artificial and human intelligence are captured under the name ``Crowd-Based Requirements Engineering'', or CrowdRE in short~\cite{Groen17b}.
+
+The motivations for this workshop are the following:
+\begin{itemize}
+\item Besides the success stories reported in academic studies, AI techniques for RE have not gained sufficient traction in industry yet. Why is that the case?
+\item The variety of techniques, quality notions, and case studies calls for community-building initiatives and constructing a common body of knowledge that supports the creation of better solutions.
+\item There is an ongoing debate in the RE community about how effective AI techniques must at least be to create a benefit in industry. For example, Dan Berry et al.'s claim~\cite{Berry2012} that tools with recall below 100\% may be useless. Is this hypothesis also shared by practitioners from the industry? Are there alternative theories on what makes AI for RE useful?
+\item Bringing together the fields of AI, RE and CrowdRE to foster exchange and create synergies between the communities.
+\end{itemize}
+
+\subsection{Objectives}
+The primary purpose of this workshop is to explore synergies between AI and RE in order to identify complex RE problems that could benefit from the application of AI techniques. 
+
+A focal topic of this fifth edition of the workshop is the use of AI techniques for stimulating, collecting, and analyzing crowd-generated data to derive requirements, a process commonly known as \textit{CrowdRE}. The recent CrowdRE workshop series, collocated with the RE conference, has shown that crowd-generated data provide great potential and challenges for AI techniques and automation, and that the research being performed in the fields of AIRE and CrowdRE is highly compatible. Therefore, the organizers of the CrowdRE and the AIRE workshop series want to help this joint approach to bring both communities together to facilitate bilateral learning and synergies that have not been tapped into yet.
+This workshop also aims to strengthen the links in the community and foster the communication between industry and academia, as well as between researchers working in the fields of AI, RE, and CrowdRE. 
+
+Finally, the workshop aims to make researchers showcase and compare their work through tool demonstrations. This way, we can interactively compare the state of the art, understand research gaps, and inspire new work. In addition, this should motivate researchers to create and share fully-functioning prototypes that are made available to the community. The problem of reusing previously proposed tools was clearly stated in one of the accepted papers in AIRE'16~\cite{arendse2016toward}.
+
+
+\section{Format and Services}
+No special services are required: standard services (room, projector, student volunteer, proper Internet connection) will suffice. Flip charts and a whiteboard along with sufficient markers are appreciated. We propose that the workshop will be a \textbf{1-day} workshop.
+
+\subsection{Pre-Workshop}
+Before the workshop, the organizers will invite all speakers of accepted papers to start (or end) their presentation with a \emph{Practice Check} slide. On this slide, every author should answer and sum up three questions: 1) How can the presented approach be applied in industry? 2) Does the approach aim at reducing effort or increasing quality or both? 3) What (still) needs to be done in order to apply the approach in industry? This special slide should facilitate discussions around the leading questions of the workshops.
+
+Furthermore, the speakers will also be invited to reflect on how their automated approach to RE may help to automate CrowdRE, in line with the focal topic of the workshop.
+
+
+\subsection{Workshop} The workshop will be a one-day workshop, including one keynote, technical papers, and a break-out session to facilitate collaboration and discussions.
+
+\begin{LaTeXdescription}
+\item[Keynote and Discussion (Session 1):] We will invite an expert in the field to report on his/her experience as well as vision of the future research in the field. This person will most likely be chosen among regular RE attendees.
+\item[Papers and Discussion (Session 2 and 3):] In this session, the authors of accepted research and position papers present their ideas. Sessions will be organized by topic and include substantial time for discussion guided by a discussant.
+
+\item[Break-Out (Session 4):] 
+The goal of the break-out session is to create collaboration and discussions. For this, we will adopt an \emph{open space} discussion format that we already applied successfully in the AIRE'17 edition. The participants will propose topics they like to discuss and afterwards be split into thematic groups that will explore the different aspects of one topic. The outcomes of these discussions will be analyzed by the organizers after the workshop to assess the potential for joint research projects or a Dagstuhl seminar.
+
+\item[Wrap-up (Session 4):] We will give each group time to briefly present their results. 
+\item[Tooling (TBD):] Depending on the number of submissions and the density of the program, we may find some space to allow participants to showcase their tools, either during the coffee breaks, or by providing some extra-time for the presentations, or by allocating part of a session (e.g., Session 3).
+\end{LaTeXdescription}
+
+
+%\todo[inline]{SIGSOFT as secondary}
+%After the workshop, we will focus on wrap-up and intensify collaboration through a common research roadmap. We plan to summarize and publish the results in a journal such as SIGSOFT Notes. In addition, one major goal of the workshop is to establish collaboration between different groups, especially on studies addressing the analyzed research gaps.
+
+%\subsection{Needed Services }
+%For the workshop, we would need a room, preferably in a U-shape setting, and spacious walls for post-its and notes. For the interactive part, we only need either white-boards or flip charts and markers.
+
+\section{Target Audience}
+The workshop is aimed at both participants from industry who have experience with problems with requirements quality and researchers with experience in applying automation (NLP, IR, etc.) to improve quality in RE. Our standpoint is that the industry should lead the way by explaining their most relevant problems, while academia proposes and discusses appropriate solutions, which are then again evaluated in industry.
+The workshop will be open to the public, and we expect an audience of 20--30 people.
+
+\section{Proceedings}
+Workshop proceedings will be published in the IEEE Digital Library, the standard option offered to RE workshops.
+
+\subsection{Contribution types}
+The workshop solicits two contribution types:
+
+\begin{itemize}
+\item Research papers (max. 7 pages). These papers should describe ongoing research, in terms of automating requirements engineering tasks, supporting RE tasks by AI techniques, improvements of existing approaches, as well as empirical studies and experience reports (e.g., of applied work in industry).
+\item Position papers (max. 3 pages). These papers serve to foster discussion on hot, relevant topics in the field as well as problem statements explaining problems in industrial settings.
+\end{itemize}
+
+In both cases, papers will be peer-reviewed and accepted papers will appear in the IEEE digital library. Papers should explicitly address the following points at least in the discussion/conclusion section:
+\begin{itemize}
+\item the authors' understanding of the RE tasks they wish to improve or support,
+\item the automation technique they apply and how this improves the aforementioned tasks, and
+\item how the approach is or can be applied in practice, or, if the paper discusses no applicable approach, how industry can benefit from the created knowledge.
+\end{itemize}
+
+We welcome submissions in the intersection between RE and AI, as long as they address the three points mentioned above. The topics of interest include but are not limited to:
+
+\begin{itemize}
+\item RE quality models and their automation
+\item Natural language processing and comprehension
+\item Machine learning techniques including supervised, unsupervised, and machine-human interactions
+\item Reasoning about uncertainties and ambiguities
+\item Reasoning techniques
+\item Knowledge acquisition and representation
+\item Agent-based solutions
+\item Problem-solving and decision-making support mechanisms
+\item Optimization techniques
+\item Automated approaches for prioritization
+\end{itemize}
+
+We especially invite approaches that address specific challenges of the focal topic of CrowdRE, including:
+\begin{itemize}
+\item Crowd-based monitoring and usage mining approaches
+\item Application scenarios of CrowdRE using AI technology
+\item Automatic approaches to motivate, steer, and boost creativity towards requirements elicitation and validation
+\item Platforms and tools supporting CrowdRE through mining
+\item AI and human computation
+\end{itemize}
+
+\subsection{Evaluation Process}
+The selection of papers will be based on workshop relevance, academic rigor and sound argumentation, innovation, practical relevance, and quality of writing. Position papers will further be evaluated on their potential for generating discussions and the originality of the vision.
+
+Every paper will be peer-reviewed by at least two members of the program committee adopting a single-blind review method by default. We will offer the option (on a voluntary basis) for individual PC members to adopt the signed review model.
+
+Submission, reviewing, and communication will be supported through an EasyChair instantiation. Should the organizers also submit a contribution, provided that this is allowed by the RE'18 and IEEE regulations, the reviews will be handled in an appropriate way to preserve blind review.
+
+\subsection{Programm Committee}
+We plan to invite a mix of active researchers into the program committee, who have previously published in this field. We focus on a mix of academics, preferably also with an industry background. A preliminary list is the following:
+\begin{itemize}
+  \item Alessia Knauss, Chalmers University of Technology (Sweden)
+  \item Alessio Ferrari, ISTI Pisa (Italy)
+  \item Anna Perini, Fondazione Bruno Kessler (Italy)
+  \item Anthony Finkelstein, University College London (UK)
+  \item Bj{\"o}rn Regnell, Lund University (Sweden)
+  \item Cristina Palomares, Universitat Politecnica de Catalunya (Spain)
+  \item Daniel Berry, University of Waterloo (Canada)
+  \item Daniel Mendez, Technical University Munich (Germany)
+  \item Emitza Guzman, University of Zurich (Switzerland)
+  \item Eya Ben Charrada, University of Zurich (CH)
+  \item Fabiano Dalpiaz, Utrecht University (NL)
+  \item Fatma Basak Aydemir, Utrecht University (NL)
+  \item Frank Houdek, Daimler AG (Germany)
+  \item Henning Femmer, Technical University Munich (Germany)
+  \item Irina Todoran Koitz, Siemens (Switzerland)
+  \item Itzel Morales Ramirez, Fondazione Bruno Kessler (Italy)
+  \item Jane Cleland-Huang, University of Notre Dame (USA)
+  \item Jaspreet Bhatia, Carnegie Mellon University (USA)
+  \item Jin Guo	University of Notre Dame (USA)
+  \item Kurt Schneider, Leibniz Universitat Hannover (Germany)
+  \item Lorijn van Rooijen, University of Paderborn (Germany)
+  \item Mahmood Hosseini, Bournemouth University (UK)
+  \item Marjo Kauppinen, University of Helsinki (Finland)
+  \item Mehrdad Sabetzadeh, University of Luxembourg (Luxembourg)
+  \item Neil A. Ernst, University of Victoria (Canada)
+  \item Nelly Bencomo, Aston University (UK)
+  \item Raian Ali, Bournemouth University (UK)
+  \item Soo Ling Lim, University College London (UK)
+  \item Vincenzo Gervasi, University of Pisa (Italy)
+  \item Walid Maalej, University of Hamburg (Germany)
+  \item Xavier Franch, Universitat Politecnica de Catalunya (Spain)
+\end{itemize}
+
+
+\section{Workshop History}
+This is the fifth edition of this workshop. The first edition, AIRE-2014, attracted 17 submissions and around 24 attendees. The second edition, AIRE-2015, received 6 submissions and around 15 attendees. 
+The third edition, AIRE-2016, attracted 15 submissions and around 25 attendees. The fourth edition, AIRE-2017, attracted 7 submissions and around 29 attendees.
+
+The first edition of the CrowdRE workshop, CrowdRE'15, attracted 8 submissions and around 25 attendees, and achieved its goal of formulating a common vision on CrowdRE. The second edition, CrowdRE'17, attracted 7 submissions and around 20 attendees, and helped establish the exchange of data and approaches. Exploring the intersection with adjacent domains is seen as a logical next step.
+
+To attract a substantial amount of submissions and attendees, we plan to advertise the workshop through mailing lists, social networks, and direct contact via the research networks of the organizers.
+
+\section{Organizers}
+AIRE'18 will be organized through 4 organizers (the authors of this proposal). Two of the organizers were involved in organizing the past AIRE workshops and two organizers were involved in organizing the past CrowdRE workshops. 
+
+\begin{LaTeXdescription}
+
+\item[Eduard C. Groen] \hfill\\ is a researcher at the Department of User Experience and Requirements Engineering of the Fraunhofer Institute for Experimental Software Engineering (IESE) in Kaiserslautern, Germany. He holds a master's degree in Psychology with a specialization in Engineering Psychology from the University of Twente, the Netherlands. His research interests include the derivation of functional and non-functional requirements from natural language texts and the development of task-oriented development practices. Since 2015, he has published several works on CrowdRE at among others the RE, REFSQ and in IEEE Software. He co-organizes the CreaRE and CrowdRE workshop series. He is a program committee member for NLP4RE and FIRE and has reviewed for Information and Software Technology.
+
+\item[Rachel Harrison ] \hfill \\ is professor of computer science at Oxford Brookes University, UK. Her research interests include software metrics, machine learning, and requirements engineering. Rachel is well known for her work on empirical and automated software engineering. She has over 160 publications and has consulted widely with industry, working with organizations such as IBM, Philips Research Labs, Praxis Critical Systems and The Open Group. Rachel has served on over 50 international program committees, including ICSE, Promise, ESEM and EASE, and was founder and PC Chair or Co-Chair of both the RAISE workshops at ICSE and the AIRE workshops at RE. She is Editor-in-Chief of the Software Quality Journal, published by Springer.
+
+\item[Pradeep K. Murukannaiah] \hfill\\ is an assistant professor in the Department of Software Engineering and an affiliated faculty of the Center for Cybersecurity at Rochester Institute of Technology. He received a PhD in Computer Science from North Carolina State University, where he also received the 2016 Outstanding Dissertation Award in Computer Science. The overarching theme of Pradeep's research is social computing---a research theme that cuts across software engineering, artificial intelligence, and human-computer interaction. Pradeep served as a co-chair for CrowdRE 2017 and SMASC 2017 workshops, and the 2016 Doctoral Symposium on Self-* (FAS*) Systems. In addition, he serves on program committees of prestigious conferences including AAMAS 2018, IJCAI 2018, ICDCS 2017, RE Data Track 2017, and RE@Next! 2018. Pradeep is the Information Director for ACM Transactions on Internet Technology (TOIT), and he regularly serves as a reviewer for IEEE TSC, ACM TOIT, ACM TIST, and IEEE Internet Computing.
+
+\item[Andreas Vogelsang]\hfill \\ is a professor for automotive software engineering at the Daimler Center for Automotive IT Innovations at the Technical University of Berlin (Germany). He received his PhD from the Technical University of Munich in 2015. His research interests comprise model-based requirements engineering and software architectures for embedded systems. He participated in several research collaborations with industrial partners especially from the automotive industry. He has published multiple papers at RE, REFSQ, and related workshops. He has reviewed for Science of Computer Programing, Journal of Systems Architecture, Data \& Knowledge Engineering, and others.
+\end{LaTeXdescription}
+
+The organizers are assisted by a steering committee that ensures the continuity of the workshop over the years. The steering committee consists of the seven people who co-organized the workshop in previous editions:
+\begin{itemize}
+\item Nelly Bencomo, Aston University, UK
+\item Jane Cleland-Huang, University of Notre Dame, USA
+\item Fabiano Dalpiaz, Utrecht University, Netherlands
+\item Henning Femmer, Technical University Munich, Germany
+\item Jin Guo, University of Notre Dame, USA
+\item Rachel Harrison, Oxford Brookes University, UK
+\item Andreas Vogelsang, Technical University Berlin, Germany
+\end{itemize}
+
+\section{Website}
+The website for our workshop will be based on the template used in the previous editions. For the website of the latest edition, please check \url{http://aire.in.tum.de/}. 
+
+\section{Contact Information}
+The primary contact person for the workshop is: Andreas Vogelsang (andreas.vogelsang@tu-berlin.de).
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
